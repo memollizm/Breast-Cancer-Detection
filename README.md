@@ -1,1 +1,1 @@
-### Breast-Cancer-Detection
+# <p align="center">Breast Cancer Detection</p>
