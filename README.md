@@ -1,1 +1,1 @@
-# <p align="center">Breast Cancer Detection</p>
+# <p align="center">Meme Kanseri Tespiti</p>
