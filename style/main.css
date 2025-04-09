@@ -2,21 +2,21 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f1f5f9;
+    background-color: #f9fafb;
     color: #1e293b;
     scroll-behavior: smooth;
 }
 
 header {
-    background: linear-gradient(to right, #06b6d4, #3b82f6);
+    background: linear-gradient(to right, #8d8acd, #06b6d4);
     color: white;
     text-align: center;
-    padding: 3rem 1rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 3.5rem 1rem;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     margin-bottom: 0.5rem;
 }
 
@@ -35,7 +35,7 @@ header p {
 .upload-label {
     font-weight: 600;
     font-size: 1.1rem;
-    color: #2563eb;
+    color: #4f46e5;
     margin-right: 10px;
     display: inline-block;
     margin-bottom: 1rem;
@@ -44,24 +44,24 @@ header p {
 .upload-section input[type="file"] {
     padding: 0.4rem;
     border-radius: 6px;
-    border: 1px solid #cbd5e1;
+    border: 1px solid #d1d5db;
 }
 
 .upload-section button {
     padding: 0.9rem 2rem;
     font-size: 1rem;
-    background-color: #3b82f6;
+    background-color: #dd870e;
     color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
     margin-left: 1rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 .upload-section button:hover {
-    background-color: #2563eb;
+    background-color: #4338ca;
     transform: scale(1.05);
 }
 
@@ -71,15 +71,15 @@ header p {
     flex-wrap: wrap;
     gap: 2rem;
     padding: 3rem 2rem;
-    background-color: #e2e8f0;
+    background-color: #f3f4f6;
 }
 
 .result-box {
     width: 45%;
     background-color: white;
-    border-radius: 14px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
-    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+    padding: 1.75rem;
     transition: all 0.3s ease;
 }
 
@@ -89,7 +89,7 @@ header p {
 
 .result-box h2 {
     margin-bottom: 1rem;
-    color: #0f172a;
+    color: #1e1b4b;
 }
 
 .image-output {
@@ -103,7 +103,7 @@ header p {
     max-width: 100%;
     border-radius: 10px;
     margin-top: 0.5rem;
-    border: 1px solid #cbd5e1;
+    border: 1px solid #d1d5db;
 }
 
 .info-section {
@@ -116,7 +116,7 @@ header p {
 .info-section h2 {
     font-size: 1.8rem;
     margin-bottom: 2rem;
-    color: #0f172a;
+    color: #1e1b4b;
 }
 
 .card-container {
@@ -124,13 +124,15 @@ header p {
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 
 .info-card {
     background-color: white;
     width: 320px;
     border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
@@ -138,7 +140,7 @@ header p {
 
 .info-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
 }
 
 .info-card img {
@@ -149,64 +151,23 @@ header p {
 
 .info-card h3 {
     margin: 1rem 0 0.5rem;
-    font-size: 1.25rem;
-    color: #0f172a;
+    font-size: 1.3rem;
+    color: #1e1b4b;
 }
 
 .info-card p {
     padding: 0 1.2rem 1.5rem;
     font-size: 0.95rem;
-    color: #475569;
+    color: #4b5563;
     line-height: 1.6;
 }
 
 footer {
-    background-color: #0f172a;
-    color: #cbd5e1;
+    background-color: #1e1b4b;
+    color: #e2e8f0;
     text-align: center;
     padding: 1.2rem;
     font-size: 0.95rem;
-}
-
-.card-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.info-card {
-    background-color: white;
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    text-align: center;
-}
-
-.info-card:hover {
-    transform: translateY(-5px);
-}
-
-.info-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.info-card h3 {
-    margin: 1rem 0 0.5rem;
-    font-size: 1.2rem;
-    color: #0f172a;
-}
-
-.info-card p {
-    padding: 0 1rem 1rem;
-    font-size: 0.95rem;
-    color: #475569;
-    line-height: 1.6;
 }
 
 .accuracy-box {
@@ -215,18 +176,17 @@ footer {
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
     font-weight: 600;
-    color: #0f172a;
+    color: #1e1b4b;
     background: #ffffff;
     position: relative;
-    border-radius: 12px;
+    border-radius: 14px;
     z-index: 1;
     width: fit-content;
     text-align: center;
     overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
 }
 
-/* Hareketli çerçeve */
 .accuracy-box::before {
     content: "";
     position: absolute;
@@ -235,17 +195,12 @@ footer {
     right: -2px;
     bottom: -2px;
     z-index: -1;
-    background: linear-gradient(120deg,
-            #0ea5e9,
-            #8b5cf6,
-            #10b981,
-            #0ea5e9);
+    background: linear-gradient(120deg, #4f46e5, #06b6d4, #10b981, #4f46e5);
     background-size: 400% 400%;
-    border-radius: 14px;
+    border-radius: 16px;
     animation: animate-border 6s linear infinite;
 }
 
-/* Hareketli gradient animasyonu */
 @keyframes animate-border {
     0% {
         background-position: 0% 50%;
@@ -258,4 +213,102 @@ footer {
     100% {
         background-position: 0% 50%;
     }
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 320px;
+    height: 380px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.flip-card-front h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #1e1b4b;
+}
+
+.flip-card-front p {
+    font-size: 0.95rem;
+    color: #475569;
+    margin-top: 0.5rem;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #4f46e5, #06b6d4);
+    color: white;
+}
+
+.flip-card-back h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.flip-card-back p {
+    font-size: 1rem;
+    padding: 0 1rem;
+}
+
+.nav-button {
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+    z-index: 1000;
+}
+
+.nav-button a {
+    background-color: #4f46e5;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button a:hover {
+    background-color: #4338ca;
+    transform: scale(1.05);
 }
