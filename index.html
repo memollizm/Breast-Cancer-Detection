@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meme Kanseri Tespiti</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- Ana Stil -->
+    <link rel="stylesheet" href="style/main.css" />
+</head>
+
+<body>
+    <!-- ÜST BÖLÜM -->
+    <header>
+        <h1>🩺 Yapay Zeka Destekli Meme Kanseri Tespiti</h1>
+        <p>Görüntüyü yükle ve sonucu hemen gör!</p>
+    </header>
+
+    <!-- YÜKLEME BÖLÜMÜ -->
+    <section class="upload-section">
+        <label for="imageInput" class="upload-label">📷 Görüntü Seç</label>
+        <input type="file" id="imageInput" accept="image/*" />
+        <button onclick="handleUpload()">Yükle ve Analiz Et</button>
+    </section>
+
+    <!-- SONUÇLAR -->
+    <section class="result-section">
+        <div class="result-box">
+            <h2>📊 Sınıflandırma Sonucu</h2>
+            <div class="image-output" id="classificationResult">Henüz yükleme yapılmadı</div>
+        </div>
+        <div class="result-box">
+            <h2>🧠 Segmentasyon Sonucu</h2>
+            <div class="image-output" id="segmentationResult">Henüz yükleme yapılmadı</div>
+        </div>
+    </section>
+
+    <!-- TAHMİN DOĞRULUĞU GÖSTERGESİ -->
+    <div class="accuracy-box">
+        <span>🔎 Model Doğruluğu: <strong id="modelAccuracy">%</strong></span>
+    </div>
+
+    <!-- HABER BİLGİ -->
+    <section class="info-section">
+        <h2>📰 Meme Kanseri Hakkında Bilgilendirici İçerikler</h2>
+
+        <div class="card-container">
+            <div class="info-card">
+                <img src="newsImages/images1.jpeg" alt="Meme Kanseri Erken Teşhis" />
+                <h3>Erken Teşhisin Önemi</h3>
+                <p>Meme kanserinde erken tanı, tedavi başarısını büyük ölçüde artırır. Rutin kontroller hayat kurtarır.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <img src="newsImages/images2.jpeg" alt="Ultrason Kullanımı" />
+                <h3>Ultrason Görüntülemesi</h3>
+                <p>Ultrason, meme dokusundaki kitleleri belirlemek için yaygın olarak kullanılan güvenilir bir
+                    yöntemdir.</p>
+            </div>
+
+            <div class="info-card">
+                <img src="newsImages/images3.jpeg" alt="Yapay Zeka Destekli Analiz" />
+                <h3>Yapay Zeka ile Analiz</h3>
+                <p>Yeni nesil yapay zeka sistemleri, ultrason görüntülerini analiz ederek doktorlara destek sağlar.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ALT BİLGİ -->
+    <footer>
+        <p>© 2025 Yapay Zeka ile Teşhis | <span>Developed by Mehmet Başgöze</span></p>
+    </footer>
+
+    <!-- JS Dosyası -->
+    <script src="script/app.js" defer></script>
+</body>
+
+</html>
