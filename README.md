@@ -1,12 +1,10 @@
 # 🎗️ CellCheck AI - Yapay Zeka Destekli Meme Kanseri Tespit Sistemi
 
 <div align="center">
-  <img src="images/logo.png" alt="Cancer AI Logo" width="200"/>
+  <img src="images/logo/CellCheck-Logo.png" alt="Cancer AI Logo" width="200"/>
   
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   [![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
   [![Framework](https://img.shields.io/badge/Framework-TensorFlow-orange)](https://www.tensorflow.org/)
-  [![Accuracy](https://img.shields.io/badge/Accuracy-94.5%25-green)](https://github.com/memollizm)
 </div>
 
 ## 📋 İçindekiler
