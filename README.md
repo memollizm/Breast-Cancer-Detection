@@ -1,7 +1,6 @@
 # 🎗️ Cancer AI - Yapay Zeka Destekli Meme Kanseri Tespit Sistemi
 
 <div align="center">
-  <img src="images/logo.png" alt="Cancer AI Logo" width="200"/>
   
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   [![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
@@ -57,9 +56,6 @@ Cancer AI, meme kanseri teşhisinde yapay zeka teknolojisini kullanarak doktorla
 - Font Awesome
 - Google Fonts
 
-### Veritabanı
-- SQLite
-- JSON
 
 ## 💻 Kurulum
 
@@ -114,10 +110,6 @@ python app.py
 **Mehmet Başgöze**
 - LinkedIn: [Mehmet Başgöze](https://www.linkedin.com/in/mehmetbasgoze/)
 - GitHub: [@memollizm](https://github.com/memollizm)
-
-## 📄 Lisans
-
-Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakın.
 
 ---
 
