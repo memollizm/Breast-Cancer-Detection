@@ -83,12 +83,7 @@ cd CellCheck-AI
 pip install -r requirements.txt
 ```
 
-3. Veritabanını oluşturun:
-```bash
-python init_db.py
-```
-
-4. Uygulamayı başlatın:
+3. Uygulamayı başlatın:
 ```bash
 python app.py
 ```
