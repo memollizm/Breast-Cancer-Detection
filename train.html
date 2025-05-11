@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Model Çıktıları</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style/train.css" />
+</head>
+
+<body>
+    <!-- NAVIGATOR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">🔬 Cancer AI</div>
+            <div class="navbar-links">
+                <a href="index.html">Anasayfa</a>
+                <a href="detay.html">📚 Kanser Türleri</a>
+                <a href="train.html" class="active">🧠 Model Çıktıları</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Başlık -->
+    <header>
+        <h1>🧠 U-Net Modeli Segmentasyon Çıktıları</h1>
+        <p>Eğitim sonrası modelin verdiği örnek sonuçları aşağıda görebilirsiniz.</p>
+    </header>
+
+    <!-- Segmentasyon Görselleri -->
+    <section class="output-grid">
+        <div class="output-card">
+            <img src="images/trainImages/ornek1.png" alt="Görüntü 1">
+            <h4>Giriş Görüntüsü</h4>
+        </div>
+        <div class="output-card">
+            <img src="images/trainImages/ornek2.png" alt="Görüntü 2">
+            <h4>Gerçek ve Tahmin Maske</h4>
+        </div>
+        <div class="output-card">
+            <img src="images/trainImages/ornek3.png" alt="Görüntü 3">
+            <h4>Giriş Görüntüsü</h4>
+        </div>
+        <div class="output-card">
+            <img src="images/trainImages/ornek4.png" alt="Görüntü 4">
+            <h4>Gerçek ve Tahmin Maske</h4>
+        </div>
+        <div class="output-card">
+            <img src="images/trainImages/ornek5.png" alt="Görüntü 5">
+            <h4>Giriş Görüntüsü</h4>
+        </div>
+        <div class="output-card">
+            <img src="images/trainImages/ornek6.png" alt="Görüntü 6">
+            <h4>Gerçek ve Tahmin Maske</h4>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Yapay Zeka ile Teşhis | <span>Developed by Mehmet Başgöze</span></p>
+    </footer>
+</body>
+
+</html>
