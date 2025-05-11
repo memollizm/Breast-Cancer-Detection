@@ -180,6 +180,15 @@ Non-trainable params: 0
   - Loss: Categorical Crossentropy
   - Batch Size: 32
   - Epoch: 25
+    
+ <br>
+ 
+ 
+### U-Net Model Özellikleri
+- Encoder-Decoder yapısı
+- 5 katmanlı U-Net
+- Batch Normalization
+- Dropout katmanları
 
 <br>
 
