@@ -1,0 +1,323 @@
+/* Genel Stil */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9fafb;
+    color: #1e293b;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar-logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #4f46e5;
+}
+
+.navbar-links a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: #334155;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+
+.navbar-links a:hover,
+.navbar-links a.active {
+    background-color: #4f46e5;
+    color: white;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #8d8acd, #06b6d4);
+    color: white;
+    text-align: center;
+    padding: 3.5rem 1rem;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #e0f2fe;
+}
+
+/* Yükleme Bölümü */
+.upload-section {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #ffffff;
+    box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.upload-label {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #4f46e5;
+    margin-right: 10px;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.upload-section input[type="file"] {
+    padding: 0.4rem;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+}
+
+.upload-section button {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    background-color: #dd870e;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.upload-section button:hover {
+    background-color: #4338ca;
+    transform: scale(1.05);
+}
+
+/* Sonuç Kutuları */
+.result-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    background-color: #f3f4f6;
+}
+
+.result-box {
+    width: 45%;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+    padding: 1.75rem;
+    transition: all 0.3s ease;
+}
+
+.result-box:hover {
+    transform: translateY(-6px);
+}
+
+.result-box h2 {
+    margin-bottom: 1rem;
+    color: #1e1b4b;
+}
+
+.image-output {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #64748b;
+}
+
+.image-output img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    border: 1px solid #d1d5db;
+}
+
+/* Doğruluk Kutusu */
+.accuracy-box {
+    margin: 2rem auto;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1e1b4b;
+    background: #ffffff;
+    position: relative;
+    border-radius: 14px;
+    width: fit-content;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+.accuracy-box::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    background: linear-gradient(120deg, #4f46e5, #06b6d4, #10b981, #4f46e5);
+    background-size: 400% 400%;
+    border-radius: 16px;
+    animation: animate-border 6s linear infinite;
+}
+
+@keyframes animate-border {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Flip Kartlar */
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 320px;
+    height: 380px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.flip-card-front h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #1e1b4b;
+}
+
+.flip-card-front p {
+    font-size: 0.95rem;
+    color: #475569;
+    margin-top: 0.5rem;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #4f46e5, #06b6d4);
+    color: white;
+}
+
+.flip-card-back h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.flip-card-back p {
+    font-size: 1rem;
+    padding: 0 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #1e1b4b;
+    color: #e2e8f0;
+    text-align: center;
+    padding: 1.2rem;
+    font-size: 1rem;
+}
+
+.output-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 3rem 2rem;
+    background-color: #f9fafb;
+}
+
+.output-card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.output-card:hover {
+    transform: translateY(-6px);
+}
+
+.output-card img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+}
+
+.output-card h4 {
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    color: #1e293b;
+}
