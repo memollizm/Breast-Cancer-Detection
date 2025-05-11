@@ -118,11 +118,68 @@ python app.py
 
 <br>
 
+## 📁 Veri Seti
+
+### Kaynak
+- Özel olarak toplanmış meme ultrason görüntüleri
+- Toplam 2,500+ görüntü
+
+### Sınıflar
+- Normal dokular
+- İyi huylu kitleler
+- Kötü huylu kitleler
+
+### Ön İşleme
+- 64x64 piksele yeniden boyutlandırma
+- Gri tonlamaya dönüştürme
+- Veri artırma (Data Augmentation)
+
+<br>
+
 ## 🏗️ Model Mimarisi
-- Encoder-Decoder yapısı
-- 5 katmanlı U-Net
-- Batch Normalization
-- Dropout katmanları
+
+### CNN Model Özellikleri
+```
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 64, 64, 32)        320       
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 32, 32, 32)       0         
+ )                                                               
+                                                                 
+ conv2d_1 (Conv2D)           (None, 32, 32, 32)        9248      
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 16, 16, 32)       0         
+ 2D)                                                             
+                                                                 
+ flatten (Flatten)           (None, 8192)              0         
+                                                                 
+ dense (Dense)               (None, 128)               1048704   
+                                                                 
+ dense_1 (Dense)             (None, 3)                 387       
+                                                                 
+=================================================================
+Total params: 1,058,659
+Trainable params: 1,058,659
+Non-trainable params: 0
+```
+
+### Önemli Özellikler
+- **Giriş Katmanı**: 64x64 gri tonlamalı görüntüler
+- **Evrişim Katmanları**:
+  - 32 filtreli iki katman
+  - ReLU aktivasyon fonksiyonları
+  - Max Pooling ile boyut küçültme
+- **Dense Katmanları**:
+  - 128 nöronlu tam bağlantılı katman
+  - 3 sınıflı softmax çıkış katmanı
+- **Eğitim Parametreleri**:
+  - Optimizer: Adam
+  - Loss: Categorical Crossentropy
+  - Batch Size: 32
+  - Epoch: 25
 
 <br>
 
