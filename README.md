@@ -74,8 +74,8 @@ CellCheck AI, meme kanseri teşhisinde yapay zeka teknolojisini kullanarak dokto
 
 1. Projeyi klonlayın:
 ```bash
-git clone https://github.com/memollizm/CellCheck-AI.git
-cd CellCheck-AI
+git clone https://github.com/memollizm/Breast-Cancer-Detection.git
+cd Breast-Cancer-Detection
 ```
 
 2. Gerekli paketleri yükleyin:
