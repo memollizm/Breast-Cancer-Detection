@@ -1,6 +1,7 @@
-# 🎗️ Cancer AI - Yapay Zeka Destekli Meme Kanseri Tespit Sistemi
+# 🎗️ CellCheck AI - Yapay Zeka Destekli Meme Kanseri Tespit Sistemi
 
 <div align="center">
+  <img src="images/logo.png" alt="Cancer AI Logo" width="200"/>
   
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   [![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
@@ -20,7 +21,7 @@
 
 ## 🎯 Proje Hakkında
 
-Cancer AI, meme kanseri teşhisinde yapay zeka teknolojisini kullanarak doktorlara yardımcı olan yenilikçi bir web uygulamasıdır. U-Net mimarisi kullanılarak geliştirilen derin öğrenme modeli, ultrason görüntülerini analiz ederek kitleleri tespit eder ve segmentasyon yapar.
+CellCheck AI, meme kanseri teşhisinde yapay zeka teknolojisini kullanarak doktorlara yardımcı olan yenilikçi bir web uygulamasıdır. U-Net mimarisi kullanılarak geliştirilen derin öğrenme modeli, ultrason görüntülerini analiz ederek kitleleri tespit eder ve segmentasyon yapar.
 
 ### 🌟 Temel Özellikler
 - Ultrason görüntülerinin yapay zeka ile analizi
@@ -61,8 +62,8 @@ Cancer AI, meme kanseri teşhisinde yapay zeka teknolojisini kullanarak doktorla
 
 1. Projeyi klonlayın:
 ```bash
-git clone https://github.com/memollizm/Cancer-AI.git
-cd Cancer-AI
+git clone https://github.com/memollizm/CellCheck-AI.git
+cd CellCheck-AI
 ```
 
 2. Gerekli paketleri yükleyin:
