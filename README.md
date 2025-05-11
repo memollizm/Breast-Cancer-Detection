@@ -118,7 +118,7 @@ python app.py
 
 <br>
 
-### Model Mimarisi
+## 🏗️ Model Mimarisi
 - Encoder-Decoder yapısı
 - 5 katmanlı U-Net
 - Batch Normalization
