@@ -17,7 +17,6 @@
 - [Kullanım](#-kullanım)
 - [Model Performansı](#-model-performansı)
 - [Geliştirici](#-geliştirici)
-- [Lisans](#-lisans)
 
 <br>
 
