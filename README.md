@@ -7,6 +7,8 @@
   [![Framework](https://img.shields.io/badge/Framework-TensorFlow-orange)](https://www.tensorflow.org/)
 </div>
 
+<br>
+
 ## 📋 İçindekiler
 - [Proje Hakkında](#-proje-hakkında)
 - [Özellikler](#-özellikler)
@@ -17,9 +19,13 @@
 - [Geliştirici](#-geliştirici)
 - [Lisans](#-lisans)
 
+<br>
+
 ## 🎯 Proje Hakkında
 
 CellCheck AI, meme kanseri teşhisinde yapay zeka teknolojisini kullanarak doktorlara yardımcı olan yenilikçi bir web uygulamasıdır. U-Net mimarisi kullanılarak geliştirilen derin öğrenme modeli, ultrason görüntülerini analiz ederek kitleleri tespit eder ve segmentasyon yapar.
+
+<br>
 
 ### 🌟 Temel Özellikler
 - Ultrason görüntülerinin yapay zeka ile analizi
@@ -28,6 +34,8 @@ CellCheck AI, meme kanseri teşhisinde yapay zeka teknolojisini kullanarak dokto
 - Kullanıcı dostu arayüz
 - Detaylı kanser türü bilgilendirmesi
 
+<br>
+
 ## 🚀 Özellikler
 
 ### 📊 Analiz Özellikleri
@@ -35,11 +43,15 @@ CellCheck AI, meme kanseri teşhisinde yapay zeka teknolojisini kullanarak dokto
 - **Segmentasyon**: Kitlelerin otomatik tespiti ve sınırlandırılması
 - **Doğruluk Göstergesi**: Model performansının gerçek zamanlı gösterimi
 
+<br>
+
 ### 💡 Bilgi Sistemi
 - Detaylı kanser türü açıklamaları
 - Risk faktörleri analizi
 - Erken teşhis önerileri
 - İstatistiksel veriler
+
+<br>
 
 ## 🛠️ Teknolojiler
 
@@ -49,12 +61,15 @@ CellCheck AI, meme kanseri teşhisinde yapay zeka teknolojisini kullanarak dokto
 - U-Net Model Mimarisi
 - OpenCV
 
+<br>
+
 ### Frontend
 - HTML5 & CSS3
 - JavaScript (ES6+)
 - Font Awesome
 - Google Fonts
 
+<br>
 
 ## 💻 Kurulum
 
@@ -79,6 +94,8 @@ python init_db.py
 python app.py
 ```
 
+<br>
+
 ## 📱 Kullanım
 
 1. Ana sayfada "Görüntü Yükle" butonuna tıklayın
@@ -89,20 +106,26 @@ python app.py
    - Segmentasyon görüntüsü
    - Model doğruluk oranı
 
+<br>
+
 ## 📈 Model Performansı
 
 | Metrik | Değer |
 |--------|--------|
-| Doğruluk | %94.5 |
+| Segmentasyon Modeli Doğruluğu | %94.5 |
 | IoU Skoru | 0.89 |
 | İşlem Süresi | 0.8s |
 | Veri Seti Boyutu | 2,500+ |
+
+<br>
 
 ### Model Mimarisi
 - Encoder-Decoder yapısı
 - 5 katmanlı U-Net
 - Batch Normalization
 - Dropout katmanları
+
+<br>
 
 ## 👨‍💻 Geliştirici
 
