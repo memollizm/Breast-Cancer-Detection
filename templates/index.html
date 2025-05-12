@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anasayfa - Meme Kanseri Tedavisi</title>
+    <link rel="stylesheet" href="../style/main.css" />
+    <link rel="stylesheet" href="../style/index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- NAVIGATOR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <i class="fas fa-brain"></i>
+                <span>CellCheck AI</span>
+            </div>
+            <div class="navbar-links">
+                <a href="index.html" class="active"><i class="fas fa-home"></i> Anasayfa</a>
+                <a href="detay.html"><i class="fas fa-book-medical"></i> Kanser Türleri</a>
+                <a href="train.html"><i class="fas fa-chart-line"></i> Model Çıktıları</a>
+                <a href="nutrition.html"><i class="fas fa-apple-alt"></i> Beslenme Önerileri</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ÜST BÖLÜM -->
+    <header class="hero-section">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-microscope"></i>
+                <span>Yapay Zeka Destekli Analiz</span>
+            </div>
+            <h1>Yapay Zeka Destekli Meme Kanseri Tespiti</h1>
+            <p>Görüntüyü yükle ve sonucu hemen gör! Yapay zeka teknolojimiz ile hızlı ve güvenilir sonuçlar elde edin.
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Yüksek Doğruluk</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-bolt"></i>
+                    <span>Hızlı Analiz</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Güvenilir Sonuçlar</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- YÜKLEME BÖLÜMÜ -->
+    <section class="upload-section">
+        <div class="upload-container">
+            <div class="upload-header">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <h2>Görüntü Yükle</h2>
+                <p>Ultrason görüntüsünü yükleyerek analiz sonuçlarını hemen görün</p>
+            </div>
+            <div class="upload-area" id="dropZone">
+                <input type="file" id="imageInput" accept="image/*" hidden />
+                <div class="upload-content">
+                    <i class="fas fa-file-medical"></i>
+                    <p>Görüntüyü sürükleyip bırakın veya seçin</p>
+                    <button class="upload-btn" onclick="document.getElementById('imageInput').click()">
+                        <i class="fas fa-folder-open"></i> Görüntü Seç
+                    </button>
+                </div>
+            </div>
+            <button class="analyze-btn" onclick="handleUpload()">
+                <i class="fas fa-search"></i> Analiz Et
+            </button>
+        </div>
+    </section>
+
+    <!-- SONUÇLAR -->
+    <section class="result-section">
+        <div class="result-container">
+            <div class="result-box">
+                <div class="result-header">
+                    <i class="fas fa-chart-pie"></i>
+                    <h2>Sınıflandırma Sonucu</h2>
+                </div>
+                <div class="image-output" id="classificationResult">
+                    <div class="placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Henüz yükleme yapılmadı</p>
+                    </div>
+                </div>
+            </div>
+            <div class="result-box">
+                <div class="result-header">
+                    <i class="fas fa-draw-polygon"></i>
+                    <h2>Segmentasyon Sonucu</h2>
+                </div>
+                <div class="image-output" id="segmentationResult">
+                    <div class="placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Henüz yükleme yapılmadı</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HABER BİLGİ - FLIP KARTLAR -->
+    <section class="info-section">
+        <div class="section-header">
+            <h2>Önemli Bilgiler</h2>
+            <p>Meme kanseri hakkında bilmeniz gerekenler</p>
+        </div>
+        <div class="card-container">
+            <!-- Kart 1 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="card-image">
+                            <img src="../newsImages/images1.jpeg" alt="Erken Teşhis" />
+                        </div>
+                        <div class="card-content">
+                            <h3>Erken Teşhisin Önemi</h3>
+                            <p>Meme kanserinde erken tanı, tedavi başarısını artırır.</p>
+                        </div>
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="back-content">
+                            <h3>Detaylı Bilgi</h3>
+                            <p>Düzenli kontroller, mamografi ve ultrason ile erken teşhis mümkündür. 40 yaş üstü her yıl
+                                kontrol önerilir.</p>
+                            <ul class="info-list">
+                                <li><i class="fas fa-check"></i> Düzenli kontroller</li>
+                                <li><i class="fas fa-check"></i> Mamografi taraması</li>
+                                <li><i class="fas fa-check"></i> Ultrason kontrolü</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kart 2 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="card-image">
+                            <img src="../newsImages/images2.jpeg" alt="Ultrason" />
+                        </div>
+                        <div class="card-content">
+                            <h3>Ultrason Görüntülemesi</h3>
+                            <p>Kitlelerin tespiti için güvenilir ve yaygın bir yöntemdir.</p>
+                        </div>
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="back-content">
+                            <h3>Detaylı Bilgi</h3>
+                            <p>Ultrason, meme dokusunu ayrıntılı şekilde gösterir. Özellikle genç kadınlarda yoğun doku
+                                için tercih edilir.</p>
+                            <ul class="info-list">
+                                <li><i class="fas fa-check"></i> Ağrısız işlem</li>
+                                <li><i class="fas fa-check"></i> Detaylı görüntüleme</li>
+                                <li><i class="fas fa-check"></i> Güvenli yöntem</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kart 3 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="card-image">
+                            <img src="../newsImages/images3.jpeg" alt="Yapay Zeka" />
+                        </div>
+                        <div class="card-content">
+                            <h3>Yapay Zeka ile Analiz</h3>
+                            <p>AI sistemleri doktorlara tanı koymada yardımcı olur.</p>
+                        </div>
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="back-content">
+                            <h3>Detaylı Bilgi</h3>
+                            <p>Yapay zeka modelleri, görüntüleri analiz ederek kitleleri sınıflandırabilir ve şüpheli
+                                alanları işaretleyebilir.</p>
+                            <ul class="info-list">
+                                <li><i class="fas fa-check"></i> Hızlı analiz</li>
+                                <li><i class="fas fa-check"></i> Yüksek doğruluk</li>
+                                <li><i class="fas fa-check"></i> Sürekli öğrenme</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>CellCheck AI</h3>
+                <p>Yapay zeka destekli meme kanseri teşhis sistemi</p>
+                <div class="warning-message">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Yapay zeka hata yapabilir. Lütfen bir doktora danışın.</span>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/mehmetbasgoze/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/memollizm"><i class="fab fa-github"></i></a>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2025 Yapay Zeka ile Teşhis | <span>Developed by Mehmet Başgöze</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="imageModal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- JS Dosyası -->
+    <script src="../script/index.js"></script>
+</body>
+
+</html>
