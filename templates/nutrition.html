@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beslenme Önerileri - Meme Kanseri Tedavisi</title>
+    <link rel="stylesheet" href="../style/main.css" />
+    <link rel="stylesheet" href="../style/nutrition.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <i class="fas fa-brain"></i>
+                <span>CellCheck AI</span>
+            </div>
+            <div class="navbar-links">
+                <a href="index.html"><i class="fas fa-home"></i> Anasayfa</a>
+                <a href="detay.html"><i class="fas fa-book-medical"></i> Kanser Türleri</a>
+                <a href="train.html"><i class="fas fa-chart-line"></i> Model Çıktıları</a>
+                <a href="nutrition.html" class="active"><i class="fas fa-apple-alt"></i> Beslenme Önerileri</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Sağlıklı Beslenme</h1>
+            <p>Meme kanseri tedavisi sürecinde doğru beslenme, iyileşme sürecinin önemli bir parçasıdır.</p>
+        </div>
+    </header>
+
+    <section class="nutrition-section">
+        <div class="section-title">
+            <h2>Besin Kategorileri</h2>
+            <p>Sağlıklı beslenme için önerilen besin grupları ve özellikleri</p>
+        </div>
+        <div class="filter-container">
+            <h3>Besin Kategorileri</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th-large"></i> Tümü
+                </button>
+                <button class="filter-btn" data-filter="protein">
+                    <i class="fas fa-drumstick-bite"></i> Protein Kaynakları
+                </button>
+                <button class="filter-btn" data-filter="vegetables">
+                    <i class="fas fa-seedling"></i> Sebze ve Meyveler
+                </button>
+                <button class="filter-btn" data-filter="grains">
+                    <i class="fas fa-bread-slice"></i> Tam Tahıllar
+                </button>
+                <button class="filter-btn" data-filter="dairy">
+                    <i class="fas fa-cheese"></i> Süt Ürünleri
+                </button>
+                <button class="filter-btn" data-filter="fruits">
+                    <i class="fas fa-apple-alt"></i> Meyveler
+                </button>
+            </div>
+        </div>
+
+        <div class="nutrition-container">
+            <div class="nutrition-card" data-category="protein">
+                <div class="nutrition-icon">
+                    <i class="fas fa-drumstick-bite"></i>
+                </div>
+                <div class="nutrition-image">
+                    <img src="../images/nutrition/protein.jpg" alt="Protein Kaynakları">
+                </div>
+                <h3>Protein Kaynakları</h3>
+                <ul class="nutrition-list">
+                    <li><i class="fas fa-check"></i> Yağsız et ve kümes hayvanları</li>
+                    <li><i class="fas fa-check"></i> Balık ve deniz ürünleri</li>
+                    <li><i class="fas fa-check"></i> Yumurta</li>
+                    <li><i class="fas fa-check"></i> Süt ürünleri</li>
+                    <li><i class="fas fa-check"></i> Baklagiller</li>
+                    <li><i class="fas fa-check"></i> Tofu ve soya ürünleri</li>
+                    <li><i class="fas fa-check"></i> Kuruyemişler</li>
+                </ul>
+                <div class="nutrition-tip">
+                    <i class="fas fa-lightbulb"></i>
+                    <p>Günlük protein ihtiyacınızı karşılamak için her öğünde protein içeren besinler tüketmeye özen
+                        gösterin.</p>
+                </div>
+            </div>
+
+            <div class="nutrition-card" data-category="vegetables">
+                <div class="nutrition-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <div class="nutrition-image">
+                    <img src="../images/nutrition/vegetables.jpeg" alt="Sebze ve Meyveler">
+                </div>
+                <h3>Sebze ve Meyveler</h3>
+                <ul class="nutrition-list">
+                    <li><i class="fas fa-check"></i> Koyu yeşil yapraklı sebzeler</li>
+                    <li><i class="fas fa-check"></i> Turuncu ve kırmızı sebzeler</li>
+                    <li><i class="fas fa-check"></i> Turunçgiller</li>
+                    <li><i class="fas fa-check"></i> Çilek ve böğürtlenler</li>
+                    <li><i class="fas fa-check"></i> Domates ve brokoli</li>
+                    <li><i class="fas fa-check"></i> Lahana ve karnabahar</li>
+                    <li><i class="fas fa-check"></i> Havuç ve balkabağı</li>
+                </ul>
+                <div class="nutrition-tip">
+                    <i class="fas fa-lightbulb"></i>
+                    <p>Günde en az 5 porsiyon sebze ve meyve tüketmeye çalışın. Renkli sebze ve meyveler antioksidan
+                        açısından zengindir.</p>
+                </div>
+            </div>
+
+            <div class="nutrition-card" data-category="grains">
+                <div class="nutrition-icon">
+                    <i class="fas fa-bread-slice"></i>
+                </div>
+                <div class="nutrition-image">
+                    <img src="../images/nutrition/grains.jpeg" alt="Tam Tahıllar">
+                </div>
+                <h3>Tam Tahıllar</h3>
+                <ul class="nutrition-list">
+                    <li><i class="fas fa-check"></i> Tam buğday ekmeği</li>
+                    <li><i class="fas fa-check"></i> Kahverengi pirinç</li>
+                    <li><i class="fas fa-check"></i> Yulaf</li>
+                    <li><i class="fas fa-check"></i> Kinoa</li>
+                    <li><i class="fas fa-check"></i> Bulgur</li>
+                    <li><i class="fas fa-check"></i> Arpa</li>
+                    <li><i class="fas fa-check"></i> Karabuğday</li>
+                </ul>
+                <div class="nutrition-tip">
+                    <i class="fas fa-lightbulb"></i>
+                    <p>Tam tahıllar lif açısından zengindir ve sindirim sistemini destekler. Günlük beslenmenizde tam
+                        tahıllara yer verin.</p>
+                </div>
+            </div>
+
+            <div class="nutrition-card" data-category="dairy">
+                <div class="nutrition-icon">
+                    <i class="fas fa-cheese"></i>
+                </div>
+                <div class="nutrition-image">
+                    <img src="../images/nutrition/dairy.jpg" alt="Süt Ürünleri">
+                </div>
+                <h3>Süt Ürünleri</h3>
+                <ul class="nutrition-list">
+                    <li><i class="fas fa-check"></i> Süt</li>
+                    <li><i class="fas fa-check"></i> Yoğurt</li>
+                    <li><i class="fas fa-check"></i> Kefir</li>
+                    <li><i class="fas fa-check"></i> Peynir</li>
+                    <li><i class="fas fa-check"></i> Ayran</li>
+                    <li><i class="fas fa-check"></i> Tereyağı</li>
+                </ul>
+                <div class="nutrition-tip">
+                    <i class="fas fa-lightbulb"></i>
+                    <p>Süt ürünleri kalsiyum ve protein açısından zengindir. Günlük beslenmenizde 2-3 porsiyon süt ürünü
+                        tüketmeye özen gösterin.</p>
+                </div>
+            </div>
+
+            <div class="nutrition-card" data-category="fruits">
+                <div class="nutrition-icon">
+                    <i class="fas fa-apple-alt"></i>
+                </div>
+                <div class="nutrition-image">
+                    <img src="../images/nutrition/fruits.jpeg" alt="Meyveler">
+                </div>
+                <h3>Meyveler</h3>
+                <ul class="nutrition-list">
+                    <li><i class="fas fa-check"></i> Elma</li>
+                    <li><i class="fas fa-check"></i> Portakal</li>
+                    <li><i class="fas fa-check"></i> Muz</li>
+                    <li><i class="fas fa-check"></i> Çilek</li>
+                    <li><i class="fas fa-check"></i> Karpuz</li>
+                    <li><i class="fas fa-check"></i> Kiraz</li>
+                    <li><i class="fas fa-check"></i> Üzüm</li>
+                </ul>
+                <div class="nutrition-tip">
+                    <i class="fas fa-lightbulb"></i>
+                    <p>Meyveler vitamin ve mineral açısından zengindir. Günlük beslenmenizde 2-3 porsiyon meyve
+                        tüketmeye özen gösterin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="meal-plan-section">
+        <div class="section-title">
+            <h2>Örnek Günlük Menü</h2>
+            <p>Dengeli ve sağlıklı beslenme için örnek öğün planı</p>
+        </div>
+        <div class="meal-plan-container">
+            <div class="meal-card">
+                <div class="meal-icon">
+                    <i class="fas fa-coffee"></i>
+                </div>
+                <h3>Kahvaltı</h3>
+                <ul class="meal-list">
+                    <li>Tam tahıllı ekmek</li>
+                    <li>Yumurta veya peynir</li>
+                    <li>Avokado</li>
+                    <li>Domates ve salatalık</li>
+                    <li>Yeşil çay</li>
+                </ul>
+            </div>
+
+            <div class="meal-card">
+                <div class="meal-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3>Öğle Yemeği</h3>
+                <ul class="meal-list">
+                    <li>Izgara balık veya tavuk</li>
+                    <li>Kinoa veya bulgur pilavı</li>
+                    <li>Mevsim salata</li>
+                    <li>Zeytinyağlı sebze yemeği</li>
+                    <li>Ayran veya kefir</li>
+                </ul>
+            </div>
+
+            <div class="meal-card">
+                <div class="meal-icon">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <h3>Akşam Yemeği</h3>
+                <ul class="meal-list">
+                    <li>Mercimek çorbası</li>
+                    <li>Sebze yemeği</li>
+                    <li>Tam tahıllı ekmek</li>
+                    <li>Yoğurt</li>
+                    <li>Mevsim meyvesi</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="recipes-section">
+        <div class="section-title">
+            <h2>Sağlıklı Tarifler</h2>
+            <p>Besleyici ve lezzetli tarifler ile sağlıklı beslenme</p>
+        </div>
+        <div class="recipes-container">
+            <div class="recipe-card">
+                <div class="recipe-image">
+                    <img src="../images/nutrition/recipe1.jpg" alt="Antioksidan Smoothie">
+                </div>
+                <div class="recipe-content">
+                    <h3>Antioksidan Smoothie</h3>
+                    <p>Yaban mersini, ıspanak ve muz ile hazırlanan enerji verici smoothie.</p>
+                    <button class="recipe-btn" data-recipe="smoothie">Tarifi Gör</button>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-image">
+                    <img src="../images/nutrition/recipe2.jpg" alt="Kinoa Salatası">
+                </div>
+                <div class="recipe-content">
+                    <h3>Kinoa Salatası</h3>
+                    <p>Protein açısından zengin, renkli ve besleyici bir salata.</p>
+                    <button class="recipe-btn" data-recipe="kinoa">Tarifi Gör</button>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-image">
+                    <img src="../images/nutrition/recipe3.jpg" alt="Sebze Çorbası">
+                </div>
+                <div class="recipe-content">
+                    <h3>Sebze Çorbası</h3>
+                    <p>Bağışıklık sistemini güçlendiren, besleyici bir çorba.</p>
+                    <button class="recipe-btn" data-recipe="soup">Tarifi Gör</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tarif Pop-up -->
+    <div class="recipe-popup" id="recipePopup">
+        <div class="popup-content">
+            <button class="close-popup"><i class="fas fa-times"></i></button>
+            <div class="popup-header">
+                <h3 id="popupTitle"></h3>
+            </div>
+            <div class="popup-body">
+                <div class="recipe-ingredients">
+                    <h4>Malzemeler</h4>
+                    <ul id="popupIngredients"></ul>
+                </div>
+                <div class="recipe-instructions">
+                    <h4>Hazırlanışı</h4>
+                    <ol id="popupInstructions"></ol>
+                </div>
+                <div class="recipe-tips">
+                    <h4>Öneriler</h4>
+                    <p id="popupTips"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="important-notes">
+        <div class="section-title">
+            <h2>Önemli Notlar</h2>
+            <p>Sağlıklı beslenme için dikkat edilmesi gereken önemli noktalar</p>
+        </div>
+        <div class="notes-container">
+            <div class="note-item">
+                <i class="fas fa-exclamation-circle"></i>
+                <p>Düzenli olarak su tüketin (günde en az 2-2.5 litre)</p>
+            </div>
+            <div class="note-item">
+                <i class="fas fa-exclamation-circle"></i>
+                <p>İşlenmiş gıdalardan ve şekerli içeceklerden kaçının</p>
+            </div>
+            <div class="note-item">
+                <i class="fas fa-exclamation-circle"></i>
+                <p>Öğünlerinizi düzenli saatlerde tüketin</p>
+            </div>
+            <div class="note-item">
+                <i class="fas fa-exclamation-circle"></i>
+                <p>Doktorunuza danışmadan takviye gıda kullanmayın</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>CellCheck AI</h3>
+                <p>Yapay zeka destekli meme kanseri teşhis sistemi</p>
+                <div class="warning-message">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Yapay zeka hata yapabilir. Lütfen bir doktora danışın.</span>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/mehmetbasgoze/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/memollizm"><i class="fab fa-github"></i></a>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2025 Yapay Zeka ile Teşhis | <span>Developed by Mehmet Başgöze</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script/nutrition.js"></script>
+</body>
+
+</html>
