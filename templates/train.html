@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Model Çıktıları - Meme Kanseri Tedavisi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../style/main.css" />
+    <link rel="stylesheet" href="../style/train.css" />
+</head>
+
+<body>
+    <!-- NAVIGATOR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <i class="fas fa-brain"></i>
+                <span>CellCheck AI</span>
+            </div>
+            <div class="navbar-links">
+                <a href="index.html"><i class="fas fa-home"></i> Anasayfa</a>
+                <a href="detay.html"><i class="fas fa-book-medical"></i> Kanser Türleri</a>
+                <a href="train.html" class="active"><i class="fas fa-chart-line"></i> Model Çıktıları</a>
+                <a href="nutrition.html"><i class="fas fa-apple-alt"></i> Beslenme Önerileri</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ÜST BÖLÜM -->
+    <header class="hero-section">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-chart-line"></i>
+                <span>Model Performans Analizi</span>
+            </div>
+            <h1>U-Net Modeli Segmentasyon Çıktıları</h1>
+            <p>Eğitim sonrası modelin verdiği örnek sonuçları ve performans metriklerini inceleyin.</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Yüksek Doğruluk</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-bullseye"></i>
+                    <span>Gelişmiş Segmentasyon</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Hızlı İşlem</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard -->
+    <div class="dashboard">
+        <div class="metric-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Model Doğruluğu</h3>
+            <p class="metric-value">94.5%</p>
+            <div class="trend up">
+                <i class="fas fa-arrow-up"></i>
+                <span>2.3%</span>
+            </div>
+        </div>
+        <div class="metric-card">
+            <i class="fas fa-crosshairs"></i>
+            <h3>IoU Skoru</h3>
+            <p class="metric-value">0.89</p>
+            <div class="trend up">
+                <i class="fas fa-arrow-up"></i>
+                <span>0.05</span>
+            </div>
+        </div>
+        <div class="metric-card">
+            <i class="fas fa-clock"></i>
+            <h3>Ortalama İşlem Süresi</h3>
+            <p class="metric-value">0.8s</p>
+            <div class="trend down">
+                <i class="fas fa-arrow-down"></i>
+                <span>0.2s</span>
+            </div>
+        </div>
+        <div class="metric-card">
+            <i class="fas fa-database"></i>
+            <h3>Eğitim Veri Seti</h3>
+            <p class="metric-value">2,500+</p>
+            <div class="trend up">
+                <i class="fas fa-arrow-up"></i>
+                <span>500+</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filtreler -->
+    <div class="filters">
+        <button class="filter-btn active" data-filter="all">Tümü</button>
+        <button class="filter-btn" data-filter="input">Giriş Görüntüleri</button>
+        <button class="filter-btn" data-filter="mask">Maske Görüntüleri</button>
+    </div>
+
+    <!-- Segmentasyon Görselleri -->
+    <section class="output-grid">
+        <div class="output-card" data-category="input">
+            <div class="card-image">
+                <img src="../images/trainImages/ornek1.png" alt="Giriş Görüntüsü 1">
+                <div class="overlay">
+                    <button class="zoom-btn"><i class="fas fa-search-plus"></i></button>
+                </div>
+            </div>
+            <div class="card-content">
+                <h4>Giriş Görüntüsü #1</h4>
+                <p>Ultrason görüntüsü - Normal doku</p>
+                <div class="card-stats">
+                    <span><i class="fas fa-check-circle"></i> Doğruluk: 96%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="output-card" data-category="mask">
+            <div class="card-image">
+                <img src="../images/trainImages/ornek2.png" alt="Maske Görüntüsü 1">
+                <div class="overlay">
+                    <button class="zoom-btn"><i class="fas fa-search-plus"></i></button>
+                </div>
+            </div>
+            <div class="card-content">
+                <h4>Maske Görüntüsü #1</h4>
+                <p>Gerçek ve tahmin maskesi karşılaştırması</p>
+                <div class="card-stats">
+                    <span><i class="fas fa-bullseye"></i> IoU: 0.92</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="output-card" data-category="input">
+            <div class="card-image">
+                <img src="../images/trainImages/ornek3.png" alt="Giriş Görüntüsü 2">
+                <div class="overlay">
+                    <button class="zoom-btn"><i class="fas fa-search-plus"></i></button>
+                </div>
+            </div>
+            <div class="card-content">
+                <h4>Giriş Görüntüsü #2</h4>
+                <p>Ultrason görüntüsü - Şüpheli bölge</p>
+                <div class="card-stats">
+                    <span><i class="fas fa-check-circle"></i> Doğruluk: 93%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="output-card" data-category="mask">
+            <div class="card-image">
+                <img src="../images/trainImages/ornek4.png" alt="Maske Görüntüsü 2">
+                <div class="overlay">
+                    <button class="zoom-btn"><i class="fas fa-search-plus"></i></button>
+                </div>
+            </div>
+            <div class="card-content">
+                <h4>Maske Görüntüsü #2</h4>
+                <p>Gerçek ve tahmin maskesi karşılaştırması</p>
+                <div class="card-stats">
+                    <span><i class="fas fa-bullseye"></i> IoU: 0.88</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="output-card" data-category="input">
+            <div class="card-image">
+                <img src="../images/trainImages/ornek5.png" alt="Giriş Görüntüsü 3">
+                <div class="overlay">
+                    <button class="zoom-btn"><i class="fas fa-search-plus"></i></button>
+                </div>
+            </div>
+            <div class="card-content">
+                <h4>Giriş Görüntüsü #3</h4>
+                <p>Ultrason görüntüsü - Kitle tespiti</p>
+                <div class="card-stats">
+                    <span><i class="fas fa-check-circle"></i> Doğruluk: 95%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="output-card" data-category="mask">
+            <div class="card-image">
+                <img src="../images/trainImages/ornek6.png" alt="Maske Görüntüsü 3">
+                <div class="overlay">
+                    <button class="zoom-btn"><i class="fas fa-search-plus"></i></button>
+                </div>
+            </div>
+            <div class="card-content">
+                <h4>Maske Görüntüsü #3</h4>
+                <p>Gerçek ve tahmin maskesi karşılaştırması</p>
+                <div class="card-stats">
+                    <span><i class="fas fa-bullseye"></i> IoU: 0.90</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Model Bilgileri -->
+    <section class="model-info">
+        <h2>Model Detayları</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <i class="fas fa-brain"></i>
+                <h3>Model Mimarisi</h3>
+                <p>U-Net tabanlı derin öğrenme modeli</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-layer-group"></i>
+                <h3>Katman Yapısı</h3>
+                <p>Encoder-Decoder mimarisi</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-cogs"></i>
+                <h3>Optimizasyon</h3>
+                <p>Adam optimizer, Binary Cross Entropy Loss</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-chart-bar"></i>
+                <h3>Performans</h3>
+                <p>94.5% doğruluk oranı</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>CellCheck AI</h3>
+                <p>Yapay zeka destekli meme kanseri teşhis sistemi</p>
+                <div class="warning-message">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Yapay zeka hata yapabilir. Lütfen bir doktora danışın.</span>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/mehmetbasgoze/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/memollizm"><i class="fab fa-github"></i></a>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2025 Yapay Zeka ile Teşhis | <span>Developed by Mehmet Başgöze</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="imageModal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- JS Dosyası -->
+    <script src="../script/train.js"></script>
+</body>
+
+</html>
