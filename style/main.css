@@ -712,4 +712,44 @@ footer {
     .upload-area {
         padding: 2rem 1rem;
     }
+
+    .image-output {
+        min-height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        overflow: hidden;
+    }
+
+    .image-output img {
+        max-width: 100%;
+        max-height: 300px;
+        object-fit: contain;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .loading-spinner {
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .loading-spinner i {
+        color: #0d6efd;
+        margin-bottom: 1rem;
+    }
+
+    .error-message {
+        text-align: center;
+        padding: 2rem;
+        color: #dc3545;
+    }
+
+    .error-message i {
+        margin-bottom: 1rem;
+    }
 }
