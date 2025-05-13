@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anasayfa - Meme Kanseri Tedavisi</title>
     <link rel="stylesheet" href="../style/main.css" />
-    <link rel="stylesheet" href="../style/index.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../script/index.js" defer></script>
 </head>
 
 <body>
@@ -66,19 +66,21 @@
                 <h2>Görüntü Yükle</h2>
                 <p>Ultrason görüntüsünü yükleyerek analiz sonuçlarını hemen görün</p>
             </div>
-            <div class="upload-area" id="dropZone">
-                <input type="file" id="imageInput" accept="image/*" hidden />
-                <div class="upload-content">
-                    <i class="fas fa-file-medical"></i>
-                    <p>Görüntüyü sürükleyip bırakın veya seçin</p>
-                    <button class="upload-btn" onclick="document.getElementById('imageInput').click()">
-                        <i class="fas fa-folder-open"></i> Görüntü Seç
-                    </button>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <div class="upload-area" id="dropZone">
+                    <input type="file" id="imageFile" name="file" accept="image/*" hidden />
+                    <div class="upload-content">
+                        <i class="fas fa-file-medical"></i>
+                        <p id="fileInfo">Görüntüyü sürükleyip bırakın veya seçin</p>
+                        <button type="button" class="upload-btn" id="selectImageBtn">
+                            <i class="fas fa-folder-open"></i> Görüntü Seç
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <button class="analyze-btn" onclick="handleUpload()">
-                <i class="fas fa-search"></i> Analiz Et
-            </button>
+                <button type="submit" class="analyze-btn" id="analyzeBtn">
+                    <i class="fas fa-search"></i> Analiz Et
+                </button>
+            </form>
         </div>
     </section>
 
@@ -96,6 +98,9 @@
                         <p>Henüz yükleme yapılmadı</p>
                     </div>
                 </div>
+                <div class="result-footer" id="classificationDetails">
+                    <!-- Sınıflandırma detayları buraya gelecek -->
+                </div>
             </div>
             <div class="result-box">
                 <div class="result-header">
@@ -106,6 +111,22 @@
                     <div class="placeholder">
                         <i class="fas fa-image"></i>
                         <p>Henüz yükleme yapılmadı</p>
+                    </div>
+                </div>
+                <div class="result-footer">
+                    <div class="legend">
+                        <div class="legend-item">
+                            <span class="legend-color" style="background-color: #0000FF;"></span>
+                            <span>Normal Doku</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background-color: #00FF00;"></span>
+                            <span>İyi Huylu</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background-color: #FF0000;"></span>
+                            <span>Kötü Huylu</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -134,8 +155,8 @@
                     <div class="flip-card-back">
                         <div class="back-content">
                             <h3>Detaylı Bilgi</h3>
-                            <p>Düzenli kontroller, mamografi ve ultrason ile erken teşhis mümkündür. 40 yaş üstü her yıl
-                                kontrol önerilir.</p>
+                            <p>Düzenli kontroller, mamografi ve ultrason ile erken teşhis mümkündür. 40 yaş üstü
+                                her yıl kontrol önerilir.</p>
                             <ul class="info-list">
                                 <li><i class="fas fa-check"></i> Düzenli kontroller</li>
                                 <li><i class="fas fa-check"></i> Mamografi taraması</li>
@@ -161,8 +182,8 @@
                     <div class="flip-card-back">
                         <div class="back-content">
                             <h3>Detaylı Bilgi</h3>
-                            <p>Ultrason, meme dokusunu ayrıntılı şekilde gösterir. Özellikle genç kadınlarda yoğun doku
-                                için tercih edilir.</p>
+                            <p>Ultrason, meme dokusunu ayrıntılı şekilde gösterir. Özellikle genç kadınlarda
+                                yoğun doku için tercih edilir.</p>
                             <ul class="info-list">
                                 <li><i class="fas fa-check"></i> Ağrısız işlem</li>
                                 <li><i class="fas fa-check"></i> Detaylı görüntüleme</li>
@@ -188,8 +209,8 @@
                     <div class="flip-card-back">
                         <div class="back-content">
                             <h3>Detaylı Bilgi</h3>
-                            <p>Yapay zeka modelleri, görüntüleri analiz ederek kitleleri sınıflandırabilir ve şüpheli
-                                alanları işaretleyebilir.</p>
+                            <p>Yapay zeka modelleri, görüntüleri analiz ederek kitleleri sınıflandırabilir ve
+                                şüpheli alanları işaretleyebilir.</p>
                             <ul class="info-list">
                                 <li><i class="fas fa-check"></i> Hızlı analiz</li>
                                 <li><i class="fas fa-check"></i> Yüksek doğruluk</li>
@@ -228,9 +249,6 @@
         <span class="close-modal">&times;</span>
         <img class="modal-content" id="modalImage">
     </div>
-
-    <!-- JS Dosyası -->
-    <script src="../script/index.js"></script>
 </body>
 
 </html>
