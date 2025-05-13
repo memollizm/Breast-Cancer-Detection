@@ -1,131 +1,209 @@
-// Modal işlemleri
+// Dosya seçme butonu event listener
+document.getElementById('selectImageBtn').addEventListener('click', function () {
+    document.getElementById('imageFile').click();
+});
+
+// Dosya seçildiğinde önizleme göster
+document.getElementById('imageFile').addEventListener('change', function () {
+    const file = this.files[0];
+    if (file) {
+        updateFileInfo(file);
+        displayImagePreview(file);
+    }
+});
+
+// Drag and drop işlemleri
+const dropZone = document.getElementById('dropZone');
+const fileInput = document.getElementById('imageFile');
+const fileInfo = document.getElementById('fileInfo');
+
+['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+    dropZone.addEventListener(eventName, preventDefaults, false);
+});
+
+function preventDefaults(e) {
+    e.preventDefault();
+    e.stopPropagation();
+}
+
+['dragenter', 'dragover'].forEach(eventName => {
+    dropZone.addEventListener(eventName, highlight, false);
+});
+
+['dragleave', 'drop'].forEach(eventName => {
+    dropZone.addEventListener(eventName, unhighlight, false);
+});
+
+function highlight() {
+    dropZone.classList.add('drag-over');
+}
+
+function unhighlight() {
+    dropZone.classList.remove('drag-over');
+}
+
+dropZone.addEventListener('drop', handleDrop, false);
+
+function handleDrop(e) {
+    const dt = e.dataTransfer;
+    const files = dt.files;
+
+    if (files.length) {
+        fileInput.files = files;
+        updateFileInfo(files[0]);
+        displayImagePreview(files[0]);
+    }
+}
+
+// Dosya bilgilerini güncelle
+function updateFileInfo(file) {
+    fileInfo.textContent = `Seçilen dosya: ${file.name} (${(file.size / 1024).toFixed(2)} KB)`;
+}
+
+// Görüntü önizlemesi göster
+function displayImagePreview(file) {
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+        const classificationResult = document.getElementById('classificationResult');
+        classificationResult.innerHTML = '';
+
+        const img = document.createElement('img');
+        img.src = e.target.result;
+        img.alt = 'Yüklenen görüntü';
+        img.classList.add('preview-image');
+
+        classificationResult.appendChild(img);
+
+        // Segmentasyon sonucu alanını sıfırla
+        document.getElementById('segmentationResult').innerHTML = `
+            <div class="placeholder">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Analiz için "Analiz Et" butonuna basın</p>
+            </div>
+        `;
+    };
+
+    reader.readAsDataURL(file);
+}
+
+// Segmentasyon sonucunu gösterme fonksiyonu
+function displaySegmentationResult(base64Data, container) {
+    container.innerHTML = '';
+
+    // Base64 verisini kontrol et
+    if (!base64Data.startsWith('data:image/png;base64,')) {
+        console.error("Geçersiz base64 görüntü formatı");
+        showError('Geçersiz görüntü formatı alındı', container);
+        return;
+    }
+
+    // Yeni bir canvas elementi oluştur
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    const img = new Image();
+
+    img.onload = function () {
+        // Canvas boyutlarını ayarla
+        canvas.width = img.width;
+        canvas.height = img.height;
+
+        // Görüntüyü canvas'a çiz
+        ctx.drawImage(img, 0, 0);
+
+        // Canvas'tan PNG verisini al (isteğe bağlı)
+        const pngData = canvas.toDataURL('image/png');
+        console.log("PNG verisi oluşturuldu:", pngData.substring(0, 50) + "...");
+
+        // Sonucu container'a ekle
+        const resultImg = new Image();
+        resultImg.src = pngData;
+        resultImg.alt = 'Segmentasyon Sonucu';
+        resultImg.style.maxWidth = '100%';
+        resultImg.style.maxHeight = '300px';
+        resultImg.style.display = 'block';
+        resultImg.style.margin = '0 auto';
+
+        container.appendChild(resultImg);
+    };
+
+    img.onerror = function () {
+        console.error("Görüntü yükleme hatası");
+        showError('Görüntü yüklenirken hata oluştu', container);
+    };
+
+    img.src = base64Data;
+}
+
+// Analiz butonu event listener'ı
+document.getElementById('analyzeBtn').addEventListener('click', async function (e) {
+    e.preventDefault();
+
+    const fileInput = document.getElementById('imageFile');
+    const segmentationResult = document.getElementById('segmentationResult');
+
+    if (!fileInput.files || fileInput.files.length === 0) {
+        showError('Lütfen önce bir görüntü seçin', segmentationResult);
+        return;
+    }
+
+    const file = fileInput.files[0];
+    const formData = new FormData();
+    formData.append('file', file);
+
+    try {
+        // Yükleme durumunu göster
+        segmentationResult.innerHTML = `
+            <div class="loading-spinner">
+                <i class="fas fa-spinner fa-spin fa-3x"></i>
+                <p>Görüntü analiz ediliyor...</p>
+            </div>
+        `;
+
+        const response = await fetch('http://10.14.11.96:5000/segmentation', {
+            method: 'POST',
+            body: formData
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP Hatası! Durum: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        if (data.prediction) {
+            displaySegmentationResult(data.prediction, segmentationResult);
+        } else {
+            throw new Error('API geçersiz yanıt formatı döndürdü');
+        }
+    } catch (error) {
+        console.error("Hata:", error);
+        showError(error.message, segmentationResult);
+    }
+});
+
+function showError(message, container) {
+    container.innerHTML = `
+        <div class="error-message">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p>${message}</p>
+        </div>
+    `;
+}
+
+// Modal işlemleri (eğer kullanıyorsanız)
 const modal = document.getElementById('imageModal');
 const modalImg = document.getElementById('modalImage');
 const closeModal = document.querySelector('.close-modal');
 
-// Tüm görüntü kartlarına zoom butonu ekle
-document.querySelectorAll('.card-image').forEach(card => {
-    const overlay = document.createElement('div');
-    overlay.className = 'overlay';
-    overlay.innerHTML = '<button class="zoom-btn"><i class="fas fa-search-plus"></i></button>';
-    card.appendChild(overlay);
-
-    // Zoom butonuna tıklama olayı ekle
-    overlay.querySelector('.zoom-btn').addEventListener('click', (e) => {
-        e.stopPropagation();
-        const img = card.querySelector('img');
-        modal.style.display = 'flex';
-        modalImg.src = img.src;
-    });
-});
-
-// Modal kapatma işlemleri
-closeModal.addEventListener('click', () => {
-    modal.style.display = 'none';
-});
-
-modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
+if (modal && modalImg && closeModal) {
+    closeModal.addEventListener('click', () => {
         modal.style.display = 'none';
-    }
-});
+    });
 
-// Scroll animasyonları
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animate');
-            observer.unobserve(entry.target);
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
         }
     });
-}, observerOptions);
-
-// Animasyon eklenecek elementler
-document.querySelectorAll('.flip-card, .result-box, .upload-area, .accuracy-box').forEach(element => {
-    element.classList.add('fade-in');
-    observer.observe(element);
-});
-
-// CSS Animasyonları
-const style = document.createElement('style');
-style.textContent = `
-    .fade-in {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-
-    .fade-in.animate {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-
-    .card-image:hover .overlay {
-        opacity: 1;
-    }
-
-    .zoom-btn {
-        background: white;
-        border: none;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-    }
-
-    .zoom-btn:hover {
-        transform: scale(1.1);
-    }
-
-    .modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        z-index: 1000;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .modal-content {
-        max-width: 90%;
-        max-height: 90vh;
-        object-fit: contain;
-    }
-
-    .close-modal {
-        position: absolute;
-        top: 20px;
-        right: 30px;
-        color: white;
-        font-size: 30px;
-        cursor: pointer;
-    }
-`;
-document.head.appendChild(style); 
+}
