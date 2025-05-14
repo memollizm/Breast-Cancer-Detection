@@ -750,6 +750,40 @@ footer {
     }
 
     .error-message i {
-        margin-bottom: 1rem;
+        margin-right: 10px;
     }
 }
+
+/* Segmentasyon Sonucu Legend Stilleri - YENİ EKLENEN KISIM */
+.legend {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* Açıklama öğeleri arasına biraz daha boşluk */
+    margin-top: 15px;
+    /* Üstündeki elementle arasına boşluk */
+    padding-left: 5px;
+    /* Hafif bir içten boşluk */
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 18px;
+    /* Biraz daha büyük */
+    height: 18px;
+    /* Biraz daha büyük */
+    margin-right: 10px;
+    /* Metinle arasına biraz daha boşluk */
+    border: 1px solid #bbb;
+    /* Kenarlık rengini biraz daha belirginleştirelim */
+    border-radius: 3px;
+    /* Hafif yuvarlak köşeler */
+}
+
+/* Segmentasyon Sonucu Legend Stilleri SONU */
