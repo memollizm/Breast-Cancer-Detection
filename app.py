@@ -2,14 +2,16 @@ import os
 import cv2 # type: ignore
 import numpy as np # type: ignore
 from flask import Flask, request, jsonify # type: ignore
+from flask_cors import CORS  # type: ignore
 from werkzeug.utils import secure_filename # type: ignore
 from tensorflow.keras.models import load_model # type: ignore
 import base64
 
 app = Flask(__name__)
+CORS(app) 
 
 # Konfigürasyonlar
-UPLOAD_FOLDER = 'uploads'
+UPLOAD_FOLDER = r'C:\Users\PC\Desktop\breast_cancer_app_uploads'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 MODEL_PATH = 'models/resnet50_unet_breast_cancer.h5'
 
@@ -119,4 +121,5 @@ def segment_image():
         }), 500
 
 if __name__ == '__main__':
+    print("FLASK API Running")
     app.run(host='0.0.0.0', port=5000, debug=True)
