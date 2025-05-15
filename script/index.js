@@ -183,6 +183,30 @@ function displaySegmentationResult(base64Data, container) {
     resultImg.src = base64Data;
 }
 
+// Sınıflandırma sonucunu gösterme fonksiyonu
+function displayClassificationResult(data) {
+    const box = document.getElementById('classificationResult');
+    if (data.status === 'success') {
+        // Sınıf isimleri sırası: Normal, İyi Huylu, Kötü Huylu
+        const classNames = ['Normal', 'İyi Huylu', 'Kötü Huylu'];
+        let maxIdx = 0;
+        if (data.scores && data.scores.length === 3) {
+            maxIdx = data.scores.indexOf(Math.max(...data.scores));
+        }
+        let html = `<div class='classification-label'><b>Sonuç:</b> ${classNames[maxIdx]}</div>`;
+        if (data.scores) {
+            html += `<div class='classification-scores'><b>Model Olasılıkları:</b><ul style='margin:0;padding-left:18px;'>`;
+            html += `<li>Normal: ${(data.scores[0] * 100).toFixed(2)}%</li>`;
+            html += `<li>İyi Huylu: ${(data.scores[1] * 100).toFixed(2)}%</li>`;
+            html += `<li>Kötü Huylu: ${(data.scores[2] * 100).toFixed(2)}%</li>`;
+            html += `</ul></div>`;
+        }
+        box.innerHTML = html;
+    } else {
+        box.innerHTML = `<div class="error-message"><i class="fas fa-exclamation-triangle"></i> <p>${data.error || 'Sınıflandırma hatası'}</p></div>`;
+    }
+}
+
 // Analiz butonu event listener'ı
 document.getElementById('analyzeBtn').addEventListener('click', async function (e) {
     e.preventDefault(); // Formun submit edilmesini engelle
@@ -190,6 +214,7 @@ document.getElementById('analyzeBtn').addEventListener('click', async function (
 
     const fileInput = document.getElementById('imageFile');
     const segmentationResultContainer = document.getElementById('segmentationResult');
+    const classificationResultBox = document.getElementById('classificationResult');
 
     if (!segmentationResultContainer) {
         console.error("segmentationResultContainer not found in DOM!");
@@ -216,6 +241,15 @@ document.getElementById('analyzeBtn').addEventListener('click', async function (
                 <p>Görüntü analiz ediliyor...</p>
             </div>
         `;
+        // Sınıflandırma kutucuğu için yükleniyor animasyonu
+        if (classificationResultBox) {
+            classificationResultBox.innerHTML = `
+                <div class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin fa-3x"></i>
+                    <p>Sınıflandırma yapılıyor...</p>
+                </div>
+            `;
+        }
         console.log("Loading spinner displayed in segmentationResultContainer.");
 
         console.log("Sending POST request to /segmentation API...");
@@ -241,6 +275,18 @@ document.getElementById('analyzeBtn').addEventListener('click', async function (
         } else {
             console.error("API response does not contain 'prediction' field or data is null. Data:", data);
             throw new Error('API yanıtında "prediction" alanı bulunamadı veya veri formatı geçersiz.');
+        }
+
+        // Sınıflandırma API çağrısı
+        try {
+            const responseClf = await fetch('http://localhost:5000/classify', {
+                method: 'POST',
+                body: formData
+            });
+            const dataClf = await responseClf.json();
+            displayClassificationResult(dataClf);
+        } catch (error) {
+            displayClassificationResult({ status: 'error', error: error.message });
         }
         console.log("analyzeBtn click handler finished successfully.");
 
