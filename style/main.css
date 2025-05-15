@@ -787,3 +787,52 @@ footer {
 }
 
 /* Segmentasyon Sonucu Legend Stilleri SONU */
+
+/* Sınıflandırma Sonucu kutucuğu için özel stil */
+#classificationResult {
+    padding: 1.5rem 1rem;
+    background: #f6faff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(74, 144, 226, 0.08);
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.classification-label {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.7rem;
+    letter-spacing: 0.5px;
+}
+
+.classification-scores {
+    background: #eaf1fb;
+    border-radius: 8px;
+    padding: 0.7rem 1.2rem;
+    margin-top: 0.2rem;
+    font-size: 1rem;
+    color: #2c3e50;
+    width: 100%;
+    max-width: 320px;
+}
+
+.classification-scores ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.classification-scores li {
+    padding: 0.2rem 0;
+    border-bottom: 1px solid #dbeafe;
+    font-size: 1rem;
+}
+
+.classification-scores li:last-child {
+    border-bottom: none;
+}
