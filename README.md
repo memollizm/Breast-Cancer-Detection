@@ -24,6 +24,9 @@
 
 - [Proje Tanıtımı](#proje-tanıtımı)
 - [Ekran Görüntüleri](#ekran-görüntüleri)
+- [Detay Sayfası](#detay-sayfası)
+- [Eğitim/Model Çıktıları Sayfası](#eğitimmodel-çıktıları-sayfası)
+- [Beslenme Önerileri Sayfası](#beslenme-önerileri-sayfası)
 - [Özellikler](#özellikler)
 - [Kullanım Senaryosu](#kullanım-senaryosu)
 - [Kurulum ve Çalıştırma](#kurulum-ve-çalıştırma)
@@ -53,6 +56,45 @@ CellCheck AI, meme kanseri teşhisinde doktorlara yardımcı olmak amacıyla gel
   <p>Şekil 1.1. Görüntü Yükleme Modülü</p> <br>
   <img src="images/screenshots/result.png" alt="Sonuç Ekranı" width="350"/> <br>
   <p>Şekil 1.2. Görüntülerin Sonuçlandırılması Modülü</p> <br>
+</div>
+
+---
+
+<br>
+
+## 📖 Detay Sayfası
+
+Detay sayfasında meme kanseri türleri, risk faktörleri ve erken teşhisin önemi gibi bilgilendirici içerikler sunulmaktadır.
+
+<div align="center">
+  <img src="images/screenshots/detay.png" alt="Detay Sayfası" width="350"/> <br>
+  <p>Şekil 2. Kanser Türleri ve Bilgilendirme Sayfası</p> <br>
+</div>
+
+---
+
+<br>
+
+## 🧪 Eğitim/Model Çıktıları Sayfası
+
+Bu sayfada modelin eğitim performansı, segmentasyon örnekleri ve doğruluk/IoU gibi metrikler görselleştirilmektedir.
+
+<div align="center">
+  <img src="images/screenshots/train.png" alt="Eğitim ve Model Çıktıları" width="350"/> <br>
+  <p>Şekil 3. Model Performansı ve Segmentasyon Sonuçları</p> <br>
+</div>
+
+---
+
+<br>
+
+## 🥗 Beslenme Önerileri Sayfası
+
+Beslenme önerileri sayfasında sağlıklı yaşam için besin grupları, örnek menüler ve önemli notlar yer almaktadır.
+
+<div align="center">
+  <img src="images/screenshots/nutrition.png" alt="Beslenme Önerileri" width="350"/> <br>
+  <p>Şekil 4. Beslenme Önerileri ve Bilgilendirme Sayfası</p> <br>
 </div>
 
 ---
