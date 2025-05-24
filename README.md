@@ -1,200 +1,194 @@
 # 🎗️ CellCheck AI - Yapay Zeka Destekli Meme Kanseri Tespit Sistemi
 
 <div align="center">
-  <img src="images/logo/CellCheck-Logo.png" alt="Cancer AI Logo" width="200"/>
-  
-  [![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
-  [![Framework](https://img.shields.io/badge/Framework-TensorFlow-orange)](https://www.tensorflow.org/)
+  <img src="images/logo/CellCheck-Logo.png" alt="CellCheck AI Logo" width="180"/>
+  <br><br>
+  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.8%2B-blue?logo=python"></a>
+  <a href="https://www.tensorflow.org/"><img src="https://img.shields.io/badge/TensorFlow-2.x-orange?logo=tensorflow"></a>
+  <a href="https://flask.palletsprojects.com/"><img src="https://img.shields.io/badge/Flask-2.x-lightgrey?logo=flask"></a>
 </div>
 
-<br>
+---
+
+## 🚀 Hızlı Bakış
+
+**CellCheck AI**, meme kanseri teşhisinde yapay zeka destekli analiz ve segmentasyon sunan, modern ve kullanıcı dostu bir web uygulamasıdır. Ultrason görüntülerini yükleyerek, anında sınıflandırma ve segmentasyon sonuçlarını görebilirsiniz.
+
+---
+
+## 🎬 Canlı Demo
+
+<div align="center">
+  <a href="https://youtu.be/ORNEK-LINK" target="_blank">
+    <img src="https://img.youtube.com/vi/ORNEK-LINK/0.jpg" alt="CellCheck AI Demo" width="480"/>
+    <br>
+    <b>▶️ Uygulamanın Çalışmasını İzleyin</b>
+  </a>
+</div>
+
+> **Not:** Kendi demo videonuzun linkini ve küçük resmini ekleyin.
+
+---
 
 ## 📋 İçindekiler
-- [Proje Hakkında](#-proje-hakkında)
-- [Özellikler](#-özellikler)
-- [Teknolojiler](#-teknolojiler)
-- [Kurulum](#-kurulum)
-- [Kullanım](#-kullanım)
-- [Model Performansı](#-model-performansı)
-- [Geliştirici](#-geliştirici)
 
-<br>
+- [Proje Tanıtımı](#proje-tanıtımı)
+- [Ekran Görüntüleri](#ekran-görüntüleri)
+- [Özellikler](#özellikler)
+- [Kullanım Senaryosu](#kullanım-senaryosu)
+- [Kurulum ve Çalıştırma](#kurulum-ve-çalıştırma)
+- [Model ve Veri Seti](#model-ve-veri-seti)
+- [Teknik Detaylar](#teknik-detaylar)
+- [Katkı ve Lisans](#katkı-ve-lisans)
+- [Geliştirici](#geliştirici)
 
-## 🎯 Proje Hakkında
+---
 
-CellCheck AI, meme kanseri teşhisinde yapay zeka teknolojisini kullanarak doktorlara yardımcı olan yenilikçi bir web uygulamasıdır. U-Net mimarisi kullanılarak geliştirilen derin öğrenme modeli, ultrason görüntülerini analiz ederek kitleleri tespit eder ve segmentasyon yapar.
+## 🩺 Proje Tanıtımı
 
-<br>
+CellCheck AI, meme kanseri teşhisinde doktorlara yardımcı olmak amacıyla geliştirilmiş, derin öğrenme tabanlı bir web uygulamasıdır. Kullanıcılar ultrason görüntülerini yükleyerek, **otomatik sınıflandırma** (Normal, İyi Huylu, Kötü Huylu) ve **segmentasyon** (kitlelerin sınırlarının belirlenmesi) sonuçlarını anında görebilirler.
 
-### 🌟 Temel Özellikler
-- Ultrason görüntülerinin yapay zeka ile analizi
-- Gerçek zamanlı kitle tespiti ve segmentasyonu
-- Yüksek doğruluk oranı (%94.5)
-- Kullanıcı dostu arayüz
-- Detaylı kanser türü bilgilendirmesi
+---
 
-<br>
+## 🖼️ Ekran Görüntüleri
 
-## 🚀 Özellikler
+<div align="center">
+  <img src="images/screenshots/mainpage.png" alt="Ana Sayfa" width="350"/>
+  <img src="images/screenshots/upload.png" alt="Görüntü Yükleme" width="350"/>
+  <img src="images/screenshots/result.png" alt="Sonuç Ekranı" width="350"/>
+</div>
 
-### 📊 Analiz Özellikleri
-- **Görüntü Sınıflandırma**: Ultrason görüntülerini normal/anormal olarak sınıflandırma
-- **Segmentasyon**: Kitlelerin otomatik tespiti ve sınırlandırılması
-- **Doğruluk Göstergesi**: Model performansının gerçek zamanlı gösterimi
+> **Not:** Kendi ekran görüntülerinizi `images/screenshots/` klasörüne ekleyin ve burada kullanın.
 
-<br>
+---
 
-### 💡 Bilgi Sistemi
-- Detaylı kanser türü açıklamaları
-- Risk faktörleri analizi
-- Erken teşhis önerileri
-- İstatistiksel veriler
+## 🌟 Özellikler
 
-<br>
+- **Kullanıcı Dostu Arayüz:** Modern ve sezgisel tasarım.
+- **Gerçek Zamanlı Analiz:** Ultrason görüntüsünü yükleyin, sonucu anında görün.
+- **Sınıflandırma:** Görüntüyü Normal, İyi Huylu veya Kötü Huylu olarak sınıflandırır.
+- **Segmentasyon:** Kitlelerin sınırlarını renkli olarak gösterir.
+- **Model Olasılıkları:** Sınıflandırma için güven skorlarını gösterir.
+- **Bilgilendirici Sayfalar:** Kanser türleri, risk faktörleri ve beslenme önerileri.
+- **Mobil Uyumlu:** Tüm cihazlarda sorunsuz çalışır.
 
-## 🛠️ Teknolojiler
+---
 
-### Backend
-- Python 3.8+
-- TensorFlow 2.x
-- U-Net Model Mimarisi
-- OpenCV
+## 🧑‍💻 Kullanım Senaryosu
 
-<br>
+1. **Görüntü Yükle:** Ana sayfada ultrason görüntüsünü seçin veya sürükleyip bırakın.
+2. **Analiz Et:** "Analiz Et" butonuna tıklayın.
+3. **Sonuçları İncele:** Sınıflandırma ve segmentasyon sonuçlarını, model olasılıklarını ve bilgilendirici içerikleri görüntüleyin.
 
-### Frontend
-- HTML5 & CSS3
-- JavaScript (ES6+)
-- Font Awesome
-- Google Fonts
+---
 
-<br>
+## ⚙️ Kurulum ve Çalıştırma
 
-## 💻 Kurulum
+### 1. Depoyu Klonlayın
 
-1. Projeyi klonlayın:
 ```bash
 git clone https://github.com/memollizm/Breast-Cancer-Detection.git
 cd Breast-Cancer-Detection
 ```
 
-2. Gerekli paketleri yükleyin:
+### 2. Gereksinimleri Yükleyin
+
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Uygulamayı başlatın:
+### 3. Uygulamayı Başlatın
+
 ```bash
 python app.py
 ```
 
-<br>
+> Uygulama varsayılan olarak `http://localhost:5000` adresinde çalışır.
 
-## 📱 Kullanım
+---
 
-1. Ana sayfada "Görüntü Yükle" butonuna tıklayın
-2. Ultrason görüntüsünü seçin veya sürükleyip bırakın
-3. "Analiz Et" butonuna tıklayın
-4. Sonuçları inceleyin:
-   - Sınıflandırma sonucu
-   - Segmentasyon görüntüsü
-   - Model doğruluk oranı
+## 🧠 Model ve Veri Seti
 
-<br>
+- **Veri Seti:** [BUSI with GT](https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset) (Normal, İyi Huylu, Kötü Huylu)
+- **Segmentasyon Modeli:** U-Net (ResNet50 backbone)
+- **Sınıflandırma Modeli:** Basit CNN (2 Conv2D + Dense)
+- **Eğitim:** 2,500+ ultrason görüntüsü, veri artırma ve ön işleme ile
 
-## 📈 Model Performansı
+---
 
-| Metrik | Değer |
-|--------|--------|
-| Segmentasyon Modeli Doğruluğu | %94.5 |
-| IoU Skoru | 0.89 |
-| İşlem Süresi | 0.8s |
-| Veri Seti Boyutu | 2,500+ |
+## 🔬 Teknik Detaylar
 
-<br>
+### Backend
 
-## 📁 Veri Seti
+- **Flask** ile REST API
+- `/classify` : Görüntü sınıflandırma (Normal, İyi Huylu, Kötü Huylu)
+- `/segmentation` : Görüntü segmentasyonu (kitle sınırları)
+- **TensorFlow** ile model yükleme ve tahmin
+- **OpenCV** ile görüntü işleme
 
-### Kaynak
-- Özel olarak toplanmış meme ultrason görüntüleri
-- Toplam 2,500+ görüntü
+### Frontend
 
-### Sınıflar
-- Normal dokular
-- İyi huylu kitleler
-- Kötü huylu kitleler
+- **HTML5, CSS3, JavaScript**
+- Modern, responsive ve etkileşimli arayüz
+- Sonuçların görsel olarak sunulması
 
-### Ön İşleme
-- 64x64 piksele yeniden boyutlandırma
-- Gri tonlamaya dönüştürme
-- Veri artırma (Data Augmentation)
+### Klasör Yapısı
 
-<br>
-
-## 🏗️ Model Mimarisi
-
-### CNN Model Özellikleri
 ```
-Model: "sequential"
-_________________________________________________________________
- Layer (type)                Output Shape              Param #   
-=================================================================
- conv2d (Conv2D)             (None, 64, 64, 32)        320       
-                                                                 
- max_pooling2d (MaxPooling2D  (None, 32, 32, 32)       0         
- )                                                               
-                                                                 
- conv2d_1 (Conv2D)           (None, 32, 32, 32)        9248      
-                                                                 
- max_pooling2d_1 (MaxPooling  (None, 16, 16, 32)       0         
- 2D)                                                             
-                                                                 
- flatten (Flatten)           (None, 8192)              0         
-                                                                 
- dense (Dense)               (None, 128)               1048704   
-                                                                 
- dense_1 (Dense)             (None, 3)                 387       
-                                                                 
-=================================================================
-Total params: 1,058,659
-Trainable params: 1,058,659
-Non-trainable params: 0
+├── app.py
+├── models/
+│   ├── resnet50_unet_breast_cancer.h5
+│   ├── cnnBreastCancer.keras
+│   └── segmentation_model.py
+├── templates/
+│   ├── index.html
+│   ├── detay.html
+│   ├── train.html
+│   └── nutrition.html
+├── script/
+│   ├── index.js
+│   ├── detay.js
+│   ├── train.js
+│   └── nutrition.js
+├── style/
+│   ├── main.css
+│   ├── detay.css
+│   ├── train.css
+│   └── nutrition.css
+├── Dataset_BUSI_with_GT/
+│   ├── normal/
+│   ├── benign/
+│   └── malignant/
+└── ...
 ```
 
-### Önemli Özellikler
-- **Giriş Katmanı**: 64x64 gri tonlamalı görüntüler
-- **Evrişim Katmanları**:
-  - 32 filtreli iki katman
-  - ReLU aktivasyon fonksiyonları
-  - Max Pooling ile boyut küçültme
-- **Dense Katmanları**:
-  - 128 nöronlu tam bağlantılı katman
-  - 3 sınıflı softmax çıkış katmanı
-- **Eğitim Parametreleri**:
-  - Optimizer: Adam
-  - Loss: Categorical Crossentropy
-  - Batch Size: 32
-  - Epoch: 25
-    
- <br>
- 
- 
-### U-Net Model Özellikleri
-- Encoder-Decoder yapısı
-- 5 katmanlı U-Net
-- Batch Normalization
-- Dropout katmanları
+---
 
-<br>
+## 🤝 Katkı ve Lisans
 
-## 👨‍💻 Geliştirici
+- Katkıda bulunmak için lütfen bir fork oluşturun ve PR gönderin.
+- Proje MIT lisansı ile lisanslanmıştır.
 
-**Mehmet Başgöze**
-- LinkedIn: [Mehmet Başgöze](https://www.linkedin.com/in/mehmetbasgoze/)
-- GitHub: [@memollizm](https://github.com/memollizm)
+---
+
+## 👨‍⚕️ Geliştirici
+
+**Mehmet Başgöze**  
+[LinkedIn](https://www.linkedin.com/in/mehmetbasgoze/) | [GitHub](https://github.com/memollizm)
 
 ---
 
 <div align="center">
-  <sub>Built with ❤️ by Mehmet Başgöze</sub>
+  <sub>Bu proje, erken teşhisin hayat kurtarabileceğine inananlar için geliştirildi. <br> Sağlık profesyonellerine ve hastalara destek olmayı amaçlar.</sub>
 </div>
+
+---
+
+> **Uyarı:** Bu uygulama tıbbi teşhis amacıyla doğrudan kullanılmamalıdır. Sonuçlar yalnızca bilgilendirme amaçlıdır ve mutlaka bir doktora danışılmalıdır.
+
+---
+
+### Notlar
+
+- Demo videosu için kendi kaydınızı yükleyip, README'deki video bağlantısını güncelleyebilirsiniz.
+- Ekran görüntüleri ve logo gibi görselleri `images/` klasöründe tutun.
