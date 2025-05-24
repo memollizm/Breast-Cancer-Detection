@@ -20,20 +20,6 @@
 
 <br>
 
-## 🎬 Canlı Demo
-
-<div align="center">
-  <a href="https://youtu.be/ORNEK-LINK" target="_blank">
-    <img src="https://img.youtube.com/vi/ORNEK-LINK/0.jpg" alt="CellCheck AI Demo" width="480"/>
-    <br>
-    <b>▶️ Uygulamanın Çalışmasını İzleyin</b>
-  </a>
-</div>
-
----
-
-<br>
-
 ## 📋 İçindekiler
 
 - [Proje Tanıtımı](#proje-tanıtımı)
@@ -61,12 +47,13 @@ CellCheck AI, meme kanseri teşhisinde doktorlara yardımcı olmak amacıyla gel
 ## 🖼️ Ekran Görüntüleri
 
 <div align="center">
-  <img src="images/screenshots/mainpage.png" alt="Ana Sayfa" width="350"/>
-  <img src="images/screenshots/upload.png" alt="Görüntü Yükleme" width="350"/>
-  <img src="images/screenshots/result.png" alt="Sonuç Ekranı" width="350"/>
+  <img src="images/screenshots/mainpage.png" alt="Ana Sayfa" width="350"/> <br>
+  <p>Şekil 1. Web Uygulamasının Ana Sayfası</p> <br>
+  <img src="images/screenshots/upload.png" alt="Görüntü Yükleme" width="350"/> <br>
+  <p>Şekil 1.1. Görüntü Yükleme Modülü</p> <br>
+  <img src="images/screenshots/result.png" alt="Sonuç Ekranı" width="350"/> <br>
+  <p>Şekil 1.2. Görüntülerin Sonuçlandırılması Modülü</p> <br>
 </div>
-
-> **Not:** Kendi ekran görüntülerinizi `images/screenshots/` klasörüne ekleyin ve burada kullanın.
 
 ---
 
