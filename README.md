@@ -8,6 +8,8 @@
   <a href="https://flask.palletsprojects.com/"><img src="https://img.shields.io/badge/Flask-2.x-lightgrey?logo=flask"></a>
 </div>
 
+<br>
+
 ---
 
 ## 🚀 Hızlı Bakış
@@ -15,6 +17,8 @@
 **CellCheck AI**, meme kanseri teşhisinde yapay zeka destekli analiz ve segmentasyon sunan, modern ve kullanıcı dostu bir web uygulamasıdır. Ultrason görüntülerini yükleyerek, anında sınıflandırma ve segmentasyon sonuçlarını görebilirsiniz.
 
 ---
+
+<br>
 
 ## 🎬 Canlı Demo
 
@@ -26,9 +30,9 @@
   </a>
 </div>
 
-> **Not:** Kendi demo videonuzun linkini ve küçük resmini ekleyin.
-
 ---
+
+<br>
 
 ## 📋 İçindekiler
 
@@ -44,11 +48,15 @@
 
 ---
 
+<br>
+
 ## 🩺 Proje Tanıtımı
 
 CellCheck AI, meme kanseri teşhisinde doktorlara yardımcı olmak amacıyla geliştirilmiş, derin öğrenme tabanlı bir web uygulamasıdır. Kullanıcılar ultrason görüntülerini yükleyerek, **otomatik sınıflandırma** (Normal, İyi Huylu, Kötü Huylu) ve **segmentasyon** (kitlelerin sınırlarının belirlenmesi) sonuçlarını anında görebilirler.
 
 ---
+
+<br>
 
 ## 🖼️ Ekran Görüntüleri
 
@@ -62,6 +70,8 @@ CellCheck AI, meme kanseri teşhisinde doktorlara yardımcı olmak amacıyla gel
 
 ---
 
+<br>
+
 ## 🌟 Özellikler
 
 - **Kullanıcı Dostu Arayüz:** Modern ve sezgisel tasarım.
@@ -74,6 +84,8 @@ CellCheck AI, meme kanseri teşhisinde doktorlara yardımcı olmak amacıyla gel
 
 ---
 
+<br>
+
 ## 🧑‍💻 Kullanım Senaryosu
 
 1. **Görüntü Yükle:** Ana sayfada ultrason görüntüsünü seçin veya sürükleyip bırakın.
@@ -81,6 +93,8 @@ CellCheck AI, meme kanseri teşhisinde doktorlara yardımcı olmak amacıyla gel
 3. **Sonuçları İncele:** Sınıflandırma ve segmentasyon sonuçlarını, model olasılıklarını ve bilgilendirici içerikleri görüntüleyin.
 
 ---
+
+<br>
 
 ## ⚙️ Kurulum ve Çalıştırma
 
@@ -107,6 +121,8 @@ python app.py
 
 ---
 
+<br>
+
 ## 🧠 Model ve Veri Seti
 
 - **Veri Seti:** [BUSI with GT](https://www.kaggle.com/datasets/aryashah2k/breast-ultrasound-images-dataset) (Normal, İyi Huylu, Kötü Huylu)
@@ -115,6 +131,8 @@ python app.py
 - **Eğitim:** 2,500+ ultrason görüntüsü, veri artırma ve ön işleme ile
 
 ---
+
+<br>
 
 ## 🔬 Teknik Detaylar
 
@@ -164,12 +182,15 @@ python app.py
 
 ---
 
+<br>
+
 ## 🤝 Katkı ve Lisans
 
 - Katkıda bulunmak için lütfen bir fork oluşturun ve PR gönderin.
-- Proje MIT lisansı ile lisanslanmıştır.
 
 ---
+
+<br>
 
 ## 👨‍⚕️ Geliştirici
 
@@ -188,7 +209,3 @@ python app.py
 
 ---
 
-### Notlar
-
-- Demo videosu için kendi kaydınızı yükleyip, README'deki video bağlantısını güncelleyebilirsiniz.
-- Ekran görüntüleri ve logo gibi görselleri `images/` klasöründe tutun.
